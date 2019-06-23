@@ -1,0 +1,11 @@
+<?php
+
+/**
+* implemenatation of hook_form_alter
+*/
+
+function myModule_form_alter(&$form , \Drupal\Core\Form\FormStateInterface $form_state , $form_id){
+    if($form_id=='node_stores_form'){
+        $form['actions']['submit']['#value']=t('New Module Save');
+    }   
+}
